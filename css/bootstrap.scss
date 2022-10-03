@@ -16,7 +16,9 @@ $custom-colors: (
 $custom-colors: (
         "primary": #007bff,
         "hvid": #fff,
-        "sorr": #000,
+        "sort": #000,
+        "search1":#1a1a1a,
+        "search2":#3f3f3f,
 );
 $theme-colors: map-merge($theme-colors, $custom-colors);
 

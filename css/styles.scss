@@ -4,7 +4,7 @@
 
 body {
 	margin: 0;
-	font-family: Poppins, sans-serif;
+	font-family: Poppins, sans-serif !important;
 	background-color: #1f1f1f;
 }
 
@@ -58,6 +58,228 @@ a{
 	text-decoration: none !important;
 }
 
+.button{
+	background-color: #04AA6D;
+	border: none;
+	color: white;
+	padding: 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+}
+
+
+
+
+
+// filmphp
+a{
+	text-transform: none;
+	text-decoration: none !important;
+}
+
+.form-control{
+	border-radius: 0% !important;
+}
+
+::placeholder{
+	color: #969696 !important;
+	font-family: Baskerville, sans-serif;
+}
+
+input:active{
+	font-family: "Avenir Next", sans-serif;
+	font-weight: bolder;
+}
+
+#filmTitel{
+	color: black !important;
+	font-family: Baskerville, sans-serif;
+}
+
+#filmAar{
+	color: black !important;
+	font-family: Baskerville, sans-serif;
+}
+
+#filmSkuespillere{
+	color: black !important;
+	font-family: Baskerville, sans-serif;
+}
+
+#filmMPA{
+	color: black !important;
+	font-family: Baskerville, sans-serif;
+}
+
+#filmTid{
+	color: black !important;
+	font-family: Baskerville, sans-serif;
+}
+
+#filmRating{
+	color: black !important;
+	font-family: Baskerville, sans-serif;
+}
+
+#filmInstruktor{
+	color: black !important;
+	font-family: Baskerville, sans-serif;
+}
+
+#filmCitat{
+	color: black !important;
+	font-family: Baskerville, sans-serif;
+}
+
+#filmUdkommelsesdato{
+	color: black !important;
+	font-family: Baskerville, sans-serif;
+}
+
+#filmUdkommelsesdato:active{
+	color: black !important;
+	font-family: Baskerville, sans-serif;
+}
+
+#filmResume{
+	color: black !important;
+	font-family: Baskerville, sans-serif;
+}
+
+input #filmTid{
+	color: #969696 !important;
+	font-family: Baskerville, sans-serif;
+}
+.tox-tinymce{
+	border-radius: 0% !important;
+}
+
+.titel{
+	font-family: Baskerville, sans-serif;
+	color: white;
+	text-transform: uppercase;
+	font-size: 18px;
+	font-weight: lighter;
+}
+
+.overskrift{
+	font-family: Baskerville, sans-serif;
+	color: white;
+	font-weight: bolder;
+	font-size: 80px;
+}
+
+.btn{
+	font-family: "Roboto Mono", sans-serif;
+	font-size: 18px;
+}
+
+.scale{
+	transform: scale(1);
+	transition: 0.3s ease-in-out;
+}
+.scale:hover{
+	transform: scale(1.05);
+	z-index: 100;
+}
+
+h6{
+	font-size: 100px;
+}
+
+
+//slider
+.slider{
+	-webkit-appearance: none;
+	margin-right: 100px !important;
+
+}
+
+select{
+	background-color: transparent;
+	color: white;
+}
+
+.select-selected.select-arrow-active:after {
+	border-color: transparent transparent #fff transparent;
+	top: 7px;
+}
+
+
+
+
+#range_weight_disp{
+	visibility: visible;
+}
+
+.card{
+	background-color: #272727 !important;
+	font-family: Poppins, sans-serif !important;
+}
+
+
+
+.ratingtxt{
+	font-family: "Roboto Mono", sans-serif;
+}
+
+.form-control::placeholder{
+	font-family: "Roboto Mono", sans-serif;
+}
+
+.form-control:checked{
+	font-weight: normal;
+}
+
+@media screen and (max-width: 390px){
+	h6{
+		font-size: 60px;
+		margin-top: 50px;
+	}
+
+	.form-control{
+		width: auto;
+		margin-left: 100px;
+	}
+
+	.form-control::placeholder{
+		font-family: "Roboto Mono", sans-serif;
+		font-size: 15px;
+	}
+
+	.ratingtxt{
+		font-size: 20px;
+	}
+
+	.filter{
+		width: 100%;
+	}
+
+	label{
+		font-size: 20px;
+	}
+
+	select .aarSearch{
+		font-size: 20px;
+	}
+
+	.quote{
+		font-size: 25px !important;
+		text-align: center;
+	}
+
+	.filmtitel{
+		font-size: 50px !important;
+	}
+
+	.pics{
+		width: 210px !important;
+		box-shadow: none;
+	}
+}
 
 
 

@@ -1,13 +1,11 @@
 <?php
 require "settings/init.php";
 
-$movies = $db->sql("SELECT * FROM Filmsogning WHERE`filmId` IN (2);");
+$bind = [":movieId" => $_GET["movieId"]];
+
+$movies = $db->sql("SELECT * FROM Filmsogning WHERE`filmId` = :movieId;", $bind);
 ?>
 
-
-
-
-}
 
 <!DOCTYPE html>
 <html lang="da">
@@ -28,13 +26,21 @@ $movies = $db->sql("SELECT * FROM Filmsogning WHERE`filmId` IN (2);");
     <link href="css/styles.css" rel="stylesheet" type="text/css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/b7f7f27b49.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+<div class="container-fluid">
+    <div class="col-12">
+        <div class="back text-hvid p-3">
+            <a href="index.html"><i class="fa-solid fa-arrow-left-long fa-1x link-hvid"></i></a>
+        </div>
+    </div>
+</div>
 <div class="container-fluid p-5">
     <div class="row">
         <div class="col-12 text-hvid mt-1">
-            <div style="font-size: 70px;" class="">
+            <div style="font-size: 70px;" class="filmtitel">
 
                 <?php
                 echo $Filmsogning->filmTitel;
@@ -80,10 +86,11 @@ $movies = $db->sql("SELECT * FROM Filmsogning WHERE`filmId` IN (2);");
                 (USA)
             </div>
 
-            <div class="pics justify-content-start d-flex">
-                <div class="col-12 text-hvid" style="height: 508px; width: 341px; background-color: #2f2f2f; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
-                </div>
-                <div class="col-12  text-hvid mx-3" style="height: 508px; width: 680px; background-color: #2f2f2f; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
+            <div class="justify-content-start d-flex">
+                <div class="col-12 text-hvid pics " style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
+
+                    <img src="uploads/<?php echo $Filmsogning->filmBillede; ?>">
+
                 </div>
             </div>
 
@@ -94,6 +101,7 @@ $movies = $db->sql("SELECT * FROM Filmsogning WHERE`filmId` IN (2);");
                 echo $Filmsogning->filmResume;
                 ?>
             </div>
+
 <!--filmInstruktor-->
             <div class="col-12 instructor justify-content-start d-flex mt-2">
                 <div class="big" style="font-size: 23px;">

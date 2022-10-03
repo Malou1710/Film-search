@@ -30,9 +30,31 @@ if ($data["password"] == "1710"){
     $sql = "SELECT * FROM Filmsogning WHERE 1=1";
     $bind = [];
 
+//    Søg filmtitel - Filmtitel-søgning
     if(!empty($data["nameSearch"])){
-        $sql .= " AND filmTitel = :filmTitel";
+        $sql .= " AND filmTitel LIKE CONCAT('%', :filmTitel, '%')";
         $bind[":filmTitel"] = $data["nameSearch"];
+    }
+
+// Rating slider
+    if(!empty($data["ratingSearch"])){
+        $sql .= " AND filmRating LIKE CONCAT('%', :filmRating, '%')";
+        $bind[":filmRating"] = $data["ratingSearch"];
+    }
+
+//    MPA slider
+    if(!empty($data["mpaSearch"])){
+        $sql .= " AND filmMPA LIKE CONCAT('%', :filmMPA, '%')";
+        $bind[":filmMPA"] = $data["mpaSearch"];
+    }
+
+    //    År slider
+    if(!empty($data["aarSearch"])){
+        $endYear = $data["aarSearch"];
+        $endYear = substr_replace($endYear,"9",-1);
+        $sql .= " AND filmAar >= :aarSearch AND filmAar <= :endYear";
+        $bind[":aarSearch"] = $data["aarSearch"];
+        $bind[":endYear"] = $endYear;
     }
 
     $Filmsogning = $db->sql($sql, $bind);
